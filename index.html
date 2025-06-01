@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+  <meta charset="UTF-8">
+  <title>🎉 عید آفر - مفت بیوٹی گفٹ + 100GB</title>
+
+  <!-- Share Meta -->
+  <meta property="og:title" content="🎉 عید آفر - مفت بیوٹی گفٹ + 100GB" />
+  <meta property="og:description" content="صرف 7 جون تک! ابھی کلیم کریں۔" />
+  <meta property="og:image" content="https://i.ibb.co/CCBFrVh/a-glimpse-of-sacrifice-e2-80-93-eid-ul-adha-2025-11705259-jpg-w700wp.webp" />
+  <meta property="og:url" content="https://your-blog-url.com" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #fff0f5, #e0f7ff);
+      text-align: center;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 420px;
+      margin: auto;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(255,192,203,0.4);
+      padding: 25px;
+      position: relative;
+    }
+
+    img.main-img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    h1 {
+      color: #e91e63;
+      font-size: 26px;
+      margin-top: 15px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #444;
+      margin: 15px 0;
+    }
+
+    #claimBtn {
+      background: linear-gradient(45deg, #ff5fa2, #ff78b1, #ffa3c4);
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+      transition: all 0.4s ease;
+      animation: pulse 2s infinite;
+    }
+
+    #claimBtn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255, 105, 180, 0.8);
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px rgba(255, 105, 180, 0.5); }
+      50% { box-shadow: 0 0 25px rgba(255, 105, 180, 0.9); }
+      100% { box-shadow: 0 0 10px rgba(255, 105, 180, 0.5); }
+    }
+
+    .gift-options, .form-section {
+      display: none;
+      margin-top: 20px;
+    }
+
+    .gift-options button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .gift-options button:hover {
+      background-color: #ff1493;
+    }
+
+    input[type="tel"] {
+      padding: 10px;
+      width: 90%;
+      font-size: 16px;
+      margin: 15px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button.submit-btn {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #countdown {
+      font-size: 18px;
+      margin-top: 25px;
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <img class="main-img" src="https://i.ibb.co/CCBFrVh/a-glimpse-of-sacrifice-e2-80-93-eid-ul-adha-2025-11705259-jpg-w700wp.webp" alt="Eid Gift">
+
+  <h1>🎀 عید الاضحیٰ آفر 🎁</h1>
+  <p>. ✨ اپنے انٹرنیٹ کے خواب کریں پورے! حاصل کریں 100 GB 📶 مفت – کوئی چارجز نہیں 🚫 صرف محدود وقت! 🎁
+</p>
+
+  <button id="claimBtn" onclick="showGiftOptions()">🎁 Gift Claim کریں</button>
+
+  <div class="gift-options" id="giftOptions">
+    <button onclick="selectGift('beauty')">  📱 Zong</button>
+    <button onclick="selectGift('internet')">📱  Ufone</button>
+    <button onclick="selectGift('special')">📱Telenor</button>
+    <button onclick="selectGift('eid')">📱 Jazz</button>
+  </div>
+
+  <div class="form-section" id="formSection">
+    <p>اپنا موبائل نمبر درج کریں:</p>
+    <input type="tel" id="mobileNumber" placeholder="03XXXXXXXXX">
+    <button class="submit-btn" onclick="submitForm()">🚀 Submit</button>
+  </div>
+
+  <div id="countdown">⏳ آفر ختم ہونے میں وقت باقی ہے: ...</div>
+</div>
+
+<script>
+  function showGiftOptions() {
+    document.getElementById("claimBtn").style.display = "none";
+    document.getElementById("giftOptions").style.display = "block";
+  }
+
+  function selectGift(option) {
+    document.getElementById("giftOptions").style.display = "none";
+    document.getElementById("formSection").style.display = "block";
+  }
+
+  function submitForm() {
+    var number = document.getElementById("mobileNumber").value;
+    if (number.trim() === "") {
+      alert("براہ کرم موبائل نمبر درج کریں۔");
+      return;
+    }
+    window.location.href = "https://your-blog-url.com"; // ← CHANGE THIS TO YOUR REDIRECT LINK
+  }
+
+  // Countdown till 7 June
+  const endDate = new Date("2025-06-07T23:59:59").getTime();
+  const countdown = document.getElementById("countdown");
+  setInterval(function () {
+    const now = new Date().getTime();
+    const distance = endDate - now;
+    if (distance < 0) {
+      countdown.innerHTML = "❌ آفر ختم ہوچکی ہے";
+      return;
+    }
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    countdown.innerHTML = `⏳ ${days} دن ${hours} گھنٹے ${minutes} منٹ ${seconds} سیکنڈ باقی`;
+  }, 1000);
+</script>
+
+</body>
+</html>
