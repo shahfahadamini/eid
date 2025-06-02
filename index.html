@@ -1,24 +1,21 @@
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="ur" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <title>🎉 عید آفر - مفت بیوٹی گفٹ + 100GB</title>
-
-  <!-- Share Meta -->
   <meta property="og:title" content="🎉 عید آفر - مفت بیوٹی گفٹ + 100GB" />
   <meta property="og:description" content="صرف 7 جون تک! ابھی کلیم کریں۔" />
   <meta property="og:image" content="https://i.ibb.co/CCBFrVh/a-glimpse-of-sacrifice-e2-80-93-eid-ul-adha-2025-11705259-jpg-w700wp.webp" />
   <meta property="og:url" content="https://your-blog-url.com" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <style>
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', Arial, sans-serif;
       background: linear-gradient(135deg, #fff0f5, #e0f7ff);
-      text-align: center;
+      text-align: right;
+      direction: rtl;
       padding: 30px;
     }
-
     .container {
       max-width: 420px;
       margin: auto;
@@ -28,24 +25,20 @@
       padding: 25px;
       position: relative;
     }
-
     img.main-img {
       width: 100%;
       border-radius: 15px;
     }
-
     h1 {
       color: #e91e63;
       font-size: 26px;
       margin-top: 15px;
     }
-
     p {
       font-size: 18px;
       color: #444;
       margin: 15px 0;
     }
-
     #claimBtn {
       background: linear-gradient(45deg, #ff5fa2, #ff78b1, #ffa3c4);
       color: white;
@@ -59,23 +52,19 @@
       transition: all 0.4s ease;
       animation: pulse 2s infinite;
     }
-
     #claimBtn:hover {
       transform: scale(1.05);
       box-shadow: 0 0 30px rgba(255, 105, 180, 0.8);
     }
-
     @keyframes pulse {
       0% { box-shadow: 0 0 10px rgba(255, 105, 180, 0.5); }
       50% { box-shadow: 0 0 25px rgba(255, 105, 180, 0.9); }
       100% { box-shadow: 0 0 10px rgba(255, 105, 180, 0.5); }
     }
-
     .gift-options, .form-section {
       display: none;
       margin-top: 20px;
     }
-
     .gift-options button {
       display: block;
       width: 100%;
@@ -89,11 +78,9 @@
       cursor: pointer;
       transition: 0.3s ease;
     }
-
     .gift-options button:hover {
       background-color: #ff1493;
     }
-
     input[type="tel"] {
       padding: 10px;
       width: 90%;
@@ -102,7 +89,6 @@
       border-radius: 8px;
       border: 1px solid #ccc;
     }
-
     button.submit-btn {
       background-color: #28a745;
       color: white;
@@ -112,12 +98,26 @@
       cursor: pointer;
       font-size: 16px;
     }
-
     #countdown {
       font-size: 18px;
       margin-top: 25px;
       color: red;
       font-weight: bold;
+    }
+    #shareBtn {
+      margin-top: 20px;
+      background: #25D366;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to   { opacity: 1; transform: scale(1); }
     }
   </style>
 </head>
@@ -125,27 +125,70 @@
 
 <div class="container">
   <img class="main-img" src="https://i.ibb.co/CCBFrVh/a-glimpse-of-sacrifice-e2-80-93-eid-ul-adha-2025-11705259-jpg-w700wp.webp" alt="Eid Gift">
-
   <h1>🎀 عید الاضحیٰ آفر 🎁</h1>
-  <p>. ✨ اپنے انٹرنیٹ کے خواب کریں پورے! حاصل کریں 100 GB 📶 مفت – کوئی چارجز نہیں 🚫 صرف محدود وقت! 🎁
-</p>
-
-  <button id="claimBtn" onclick="showGiftOptions()">🎁 Gift Claim کریں</button>
+  <p>نیچے اپنا تحفہ منتخب کریں اور کلیم کریں!</p>
+  <button id="claimBtn" onclick="showGiftOptions()">🎁 TYPE YOUR NUMBER</button>
 
   <div class="gift-options" id="giftOptions">
-    <button onclick="selectGift('beauty')">  📱 Zong</button>
-    <button onclick="selectGift('internet')">📱  Ufone</button>
-    <button onclick="selectGift('special')">📱Telenor</button>
-    <button onclick="selectGift('eid')">📱 Jazz</button>
+    <button onclick="selectGift('beauty')">📱 ZONG</button>
+    <button onclick="selectGift('internet')">📱 TELENOR</button>
+    <button onclick="selectGift('special')">📱 JAZZ</button>
+    <button onclick="selectGift('eid')">📱UFONE </button>
   </div>
 
   <div class="form-section" id="formSection">
     <p>اپنا موبائل نمبر درج کریں:</p>
     <input type="tel" id="mobileNumber" placeholder="03XXXXXXXXX">
-    <button class="submit-btn" onclick="submitForm()">🚀 Submit</button>
+    <button class="submit-btn" onclick="submitForm()">🚀 SUBMIT</button>
   </div>
 
   <div id="countdown">⏳ آفر ختم ہونے میں وقت باقی ہے: ...</div>
+  <button id="shareBtn" onclick="sharePage()">📤 whatsapp share </button>
+</div>
+
+<!-- 🌙 Eid Popup Modal -->
+<div id="popup" style="
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+">
+  <div style="
+    background: linear-gradient(135deg, #fff0f5, #e0f7fa);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(255, 192, 203, 0.5);
+    max-width: 320px;
+    text-align: center;
+    animation: fadeIn 0.7s ease-in-out;
+    border: 4px dashed #e91e63;
+  ">
+    <h2 style="font-size: 24px; color: #e91e63; margin-bottom: 10px;">🌙 عید مبارک آفر 🎁</h2>
+    <p style="font-size: 17px; color: #444; margin-bottom: 20px;">
+      اگر آپ بھی 100GB انٹرنیٹ کمانا چاہتے ہیں تو یہ 5 دوستوں کے ساتھ شیئر کر دیں 💖
+    </p>
+    <button onclick="document.getElementById('popup').style.display='none'" style="
+      background: linear-gradient(45deg, #ff5fa2, #ff78b1);
+      color: white;
+      padding: 10px 22px;
+      font-size: 15px;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(255,105,180,0.6);
+      transition: all 0.3s ease;
+    "
+    onmouseover="this.style.transform='scale(1.05)'"
+    onmouseout="this.style.transform='scale(1)'"
+    >
+      🎀okay
+    </button>
+  </div>
 </div>
 
 <script>
@@ -165,10 +208,9 @@
       alert("براہ کرم موبائل نمبر درج کریں۔");
       return;
     }
-    window.location.href = "https://your-blog-url.com"; // ← CHANGE THIS TO YOUR REDIRECT LINK
+    window.location.href = "https://github.com"; // ← Replace with your real link
   }
 
-  // Countdown till 7 June
   const endDate = new Date("2025-06-07T23:59:59").getTime();
   const countdown = document.getElementById("countdown");
   setInterval(function () {
@@ -184,6 +226,24 @@
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
     countdown.innerHTML = `⏳ ${days} دن ${hours} گھنٹے ${minutes} منٹ ${seconds} سیکنڈ باقی`;
   }, 1000);
+
+  window.onload = function () {
+    document.getElementById("popup").style.display = "flex";
+  };
+
+  function sharePage() {
+    const shareData = {
+      title: "🎁 عید گفٹ 100GB آفر",
+      text: "100GB انٹرنیٹ حاصل کریں! بس 5 دوستوں سے شیئر کریں 🎉",
+      url: window.location.href
+    };
+
+    if (navigator.share) {
+      navigator.share(shareData).catch(console.error);
+    } else {
+      window.location.href = "https://wa.me/?text=" + encodeURIComponent(shareData.text + " " + shareData.url);
+    }
+  }
 </script>
 
 </body>
